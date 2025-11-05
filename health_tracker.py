@@ -158,6 +158,7 @@ if section == "⚖️ Weight Tracker":
         )
         fig.update_layout(height=400, hovermode="x unified")
         fig.update_layout(yaxis_range=[(minWeight-10),(maxWeight+10)])
+        fig.update_layout(showlegend=False)
         fig.add_hline(y=targetWeight, line_color="green")
         st.plotly_chart(fig, use_container_width=True)
 
@@ -175,6 +176,7 @@ if section == "⚖️ Weight Tracker":
         fig.add_hrect(
             y0=minTargetBodyFat, y1=maxTargetBodyFat, 
             line_width=0, fillcolor="green", opacity=0.2)
+        fig.update_layout(showlegend=False)    
         st.plotly_chart(fig, use_container_width=True)
 
         # ---------- Stats ----------
